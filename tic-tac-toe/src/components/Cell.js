@@ -1,4 +1,4 @@
-const Cell =({ id, cell, setCells, go, setGo, cells}) => {
+const Cell =({ id, cell, setCells, go, setGo, cells, winningMessage}) => {
    
     const handleClick = (e) => {
 
@@ -32,7 +32,7 @@ const Cell =({ id, cell, setCells, go, setGo, cells}) => {
     }
 
     return (
-        <div className="square" id={id} onClick={handleClick}>
+        <div className="square" id={id} onClick={!winningMessage && handleClick}>
 
          <div className={cell}></div>
 
