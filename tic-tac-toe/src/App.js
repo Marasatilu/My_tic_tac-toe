@@ -26,7 +26,6 @@ const App = () => {
       }
     })
   
-
     WinningCombos.forEach(array =>{
       let crossWins = array.every(cell => cells[cell] === "cross")
       if(crossWins) {
@@ -34,15 +33,20 @@ const App = () => {
         return
       }
     })
-}
+  }
 
 
     useEffect(() => {
       checkScore()
     }, [cells])
 
+
+
     return (
       <div className="app">
+        <div className="message">
+        <p className="message">{winningMessage || message}</p>
+        </div>
         <div className="gameboard">
           {cells.map((cell, index)=> 
           
@@ -58,9 +62,14 @@ const App = () => {
               />)}
           
           </div>
-          <p>{winningMessage || message}</p>
+          
+          <button type="submit" className="tryAgain" onClick={() => window.location.reload(false)} >Try Again</button>
       </div>
+      
     );
+
+
 }
+
 
 export default App;
