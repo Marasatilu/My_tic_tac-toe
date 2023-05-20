@@ -1,6 +1,7 @@
-const Cell =() => {
+const Cell =({ id, cell}) => {
+    console.log(cell)
     return (
-        <div className="square">
+        <div className="square" id={id}>
 
         </div>
     )
