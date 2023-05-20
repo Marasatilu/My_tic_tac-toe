@@ -1,7 +1,11 @@
 const Cell =({ id, cell}) => {
-    console.log(cell)
+   
+    const handleClick = () => {
+        
+    }
+
     return (
-        <div className="square" id={id}>
+        <div className="square" id={id} onClick={handleClick}>
 
         </div>
     )
