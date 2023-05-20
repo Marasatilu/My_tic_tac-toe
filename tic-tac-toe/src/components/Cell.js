@@ -1,6 +1,6 @@
 const Cell =() => {
     return (
-        <div>
+        <div className="square">
 
         </div>
     )
