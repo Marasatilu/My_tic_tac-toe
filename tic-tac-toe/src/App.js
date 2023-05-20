@@ -1,4 +1,4 @@
-
+import Cell from "./components/Cell";
 
 const App = () => {
   return (
